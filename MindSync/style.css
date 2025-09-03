@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: #222;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Menu toggle (hamburger) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav-links button {
+  background: transparent;
+  border: none;
+  color: #ddd;
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links button:hover {
+  background: #444;
+  color: #fff;
+}
+
+.nav-links button.active {
+  background: #fff;
+  color: #222;
+}
+
+/* Signout style */
+.nav-links .signout {
+  background: #e74c3c;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links .signout:hover {
+  background: #c0392b;
+}
+
+/* Content */
+.content {
+  display: none;
+  min-height: calc(100vh - 60px);
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.content.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Backgrounds */
+#dashboard { background: #1abc9c; }
+#notes { background: #3498db; }
+#wellness { background: #e74c3c; }
+#zenith { background: #9b59b6; }
+#games { background: #f39c12; }
+#leaderboard { background: #2ecc71; }
+#tests { background: #e67e22; }
+#premium { background: #f1c40f; color: #333; }
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
+
+  .nav-links {
+    display: none; /* hide links initially */
+    flex-direction: column;
+    width: 100%;
+    background: #222;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex; /* show when toggled */
+  }
+
+  .nav-links button {
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .nav-links .signout {
+    text-align: center;
+  }
+}

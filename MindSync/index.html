@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindSync - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
+
+    <!-- Left nav (features) -->
+    <div class="nav-links nav-left">
+      <button data-tab="dashboard"><i class="fa fa-home"></i> Dashboard</button>
+      <button data-tab="notes"><i class="fa fa-book-open"></i> Notes</button>
+      <button data-tab="wellness"><i class="fa fa-heart"></i> Wellness</button>
+      <button data-tab="zenith"><i class="fa fa-robot"></i> Zenith AI</button>
+      <button data-tab="games"><i class="fa fa-gamepad"></i> Games</button>
+      <button data-tab="leaderboard"><i class="fa fa-trophy"></i> Leaderboard</button>
+      <button data-tab="tests"><i class="fa fa-graduation-cap"></i> Tests</button>
+      <button data-tab="premium"><i class="fa fa-crown"></i> Premium</button>
+    </div>
+
+    <!-- Right nav (signout) -->
+    <div class="nav-links nav-right">
+      <button class="signout"><i class="fa fa-sign-out-alt"></i> Sign Out</button>
+    </div>
+  </nav>
+
+  <!-- Dashboard content -->
+  <section id="dashboard" class="content active">Dashboard Content</section>
+  <section id="notes" class="content">Notes Content</section>
+  <section id="wellness" class="content">Wellness Content</section>
+  <section id="zenith" class="content">Zenith AI Content</section>
+  <section id="games" class="content">Games Content</section>
+  <section id="leaderboard" class="content">Leaderboard Content</section>
+  <section id="tests" class="content">Tests Content</section>
+  <section id="premium" class="content">Premium Content</section>
+
+  <script src="app.js"></script>
+</body>
+</html>
